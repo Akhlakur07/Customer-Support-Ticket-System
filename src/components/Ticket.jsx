@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 const Ticket = ({ updateCounts }) => {
   const [tickets, setTickets] = useState([]);
@@ -22,9 +23,11 @@ const Ticket = ({ updateCounts }) => {
 
       setTickets((prev) =>
         prev.map((t) =>
-          t.ID === ticket.ID ? { ...t, status: "In-Progress" } : t,
-        ),
+          t.ID === ticket.ID ? { ...t, status: "In-Progress" } : t
+        )
       );
+
+      toast.success("Ticket added to Task Status");
     }
   };
 
@@ -32,6 +35,8 @@ const Ticket = ({ updateCounts }) => {
     setTaskStatus((prev) => prev.filter((t) => t.ID !== ticket.ID));
     setResolved((prev) => [...prev, ticket]);
     setTickets((prev) => prev.filter((t) => t.ID !== ticket.ID));
+
+    toast.success("Ticket marked as completed");
   };
 
   return (
@@ -90,8 +95,8 @@ const Ticket = ({ updateCounts }) => {
                       ticket.Priority === "HIGH"
                         ? "text-red-500"
                         : ticket.Priority === "MEDIUM"
-                          ? "text-yellow-500"
-                          : "text-green-500"
+                        ? "text-yellow-500"
+                        : "text-green-500"
                     }`}
                   >
                     {ticket.Priority} PRIORITY
@@ -130,6 +135,7 @@ const Ticket = ({ updateCounts }) => {
         <h2 className="text-2xl font-semibold text-[#34485A] mb-4">
           Task Status
         </h2>
+
         {taskStatus.length === 0 && (
           <p className="text-[16px] text-gray-400">
             Select a ticket to add to Task Status
@@ -140,7 +146,7 @@ const Ticket = ({ updateCounts }) => {
           {taskStatus.map((ticket) => (
             <div key={ticket.ID} className="bg-white rounded-md p-4">
               <div className="flex justify-between items-center mb-4">
-                <span className="text-lg font-medium text-[#001931] ">
+                <span className="text-lg font-medium text-[#001931]">
                   {ticket.Title}
                 </span>
               </div>
@@ -170,7 +176,9 @@ const Ticket = ({ updateCounts }) => {
           ))}
 
           {resolved.length === 0 && (
-            <p className="text-gray-400 text-[16px]">No resolved tasks yet.</p>
+            <p className="text-gray-400 text-[16px]">
+              No resolved tasks yet.
+            </p>
           )}
         </div>
       </div>

@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Ticket from "./components/Ticket";
 import Footer from "./components/Footer";
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   const [inProgressCount, setInProgressCount] = useState(0);
@@ -22,6 +23,7 @@ function App() {
         <Ticket updateCounts={updateCounts} />
         <Footer />
       </div>
+      <ToastContainer/>
     </>
   );
 }
