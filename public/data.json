@@ -1,0 +1,82 @@
+[
+  {
+    "ID": 1001,
+    "Title": "Login Issues - Can't Access Account",
+    "Description": "Customer is unable to log in to their account. They've tried resetting their password multiple times but still cannot access.",
+    "Customer": "John Smith",
+    "Date": "2024-01-15",
+    "Priority": "HIGH"
+  },
+  {
+    "ID": 1002,
+    "Title": "Payment Failed - Card Declined",
+    "Description": "Customer attempted to pay using Visa ending 1234 but the payment keeps failing despite sufficient balance.",
+    "Customer": "Sarah Johnson",
+    "Date": "2024-01-16",
+    "Priority": "HIGH"
+  },
+  {
+    "ID": 1003,
+    "Title": "Unable to Download Invoice",
+    "Description": "Customer cannot download their January invoice from the billing section. The download button is not responding.",
+    "Customer": "Michael Brown",
+    "Date": "2024-01-17",
+    "Priority": "MEDIUM"
+  },
+  {
+    "ID": 1004,
+    "Title": "Incorrect Billing Address",
+    "Description": "Customer's billing address shows a different city. They updated it but it still displays the old one.",
+    "Customer": "Emily Davis",
+    "Date": "2024-01-18",
+    "Priority": "LOW"
+  },
+  {
+    "ID": 1005,
+    "Title": "App Crash on Launch",
+    "Description": "Customer reports that the mobile app crashes immediately upon opening on Android 13.",
+    "Customer": "David Wilson",
+    "Date": "2024-01-19",
+    "Priority": "HIGH"
+  },
+  {
+    "ID": 1006,
+    "Title": "Refund Not Processed",
+    "Description": "Customer requested a refund two weeks ago but has not received the amount yet.",
+    "Customer": "Sophia Taylor",
+    "Date": "2024-01-20",
+    "Priority": "MEDIUM"
+  },
+  {
+    "ID": 1007,
+    "Title": "Two-Factor Authentication Issue",
+    "Description": "Customer is not receiving 2FA codes on their registered phone number.",
+    "Customer": "James Anderson",
+    "Date": "2024-01-21",
+    "Priority": "HIGH"
+  },
+  {
+    "ID": 1008,
+    "Title": "Unable to Update Profile Picture",
+    "Description": "Customer tries to upload a new profile picture but gets 'Upload failed' error.",
+    "Customer": "Olivia Martinez",
+    "Date": "2024-01-22",
+    "Priority": "LOW"
+  },
+  {
+    "ID": 1009,
+    "Title": "Subscription Auto-Renewal",
+    "Description": "Customer wants to enable auto-renewal for their subscription but the toggle is disabled.",
+    "Customer": "Liam Thomas",
+    "Date": "2024-01-17",
+    "Priority": "MEDIUM"
+  },
+  {
+    "ID": 1010,
+    "Title": "Missing Order Confirmation Email",
+    "Description": "Customer placed an order but didn't receive a confirmation email even though payment succeeded.",
+    "Customer": "Isabella Garcia",
+    "Date": "2024-01-24",
+    "Priority": "MEDIUM"
+  }
+]
