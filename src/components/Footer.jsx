@@ -15,10 +15,7 @@ const Footer = () => {
             CS — Ticket System
           </h2>
           <p className="text-[16px] leading-6 max-w-sm">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Our ticket system helps customers quickly report issues, track support requests, and receive timely assistance from our support team. We aim to provide a smooth and transparent support experience by ensuring every request is properly managed and resolved as efficiently as possible.
           </p>
         </div>
 
