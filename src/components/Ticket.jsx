@@ -35,10 +35,10 @@ const Ticket = ({ updateCounts }) => {
   };
 
   return (
-    <div className="lg:flex gap-6 px-[4%] pb-16 max-w-7xl">
+    <div className="lg:flex gap-6 px-[4%] pb-16">
       {/* Customer Tickets */}
-      <div className="lg:w-2/3">
-        <h2 className="text-xl font-semibold mb-4 text-gray-700">
+      <div className="lg:w-[73%]">
+        <h2 className="text-2xl font-semibold text-[#34485A] mb-4">
           Customer Tickets
         </h2>
 
@@ -51,7 +51,7 @@ const Ticket = ({ updateCounts }) => {
             >
               {/* Title + Status */}
               <div className="flex justify-between items-start mb-3">
-                <h3 className="text-xl font-semibold text-[#0f2137]">
+                <h3 className="text-[18px] font-semibold text-[#001931]">
                   {ticket.Title}
                 </h3>
 
@@ -74,22 +74,24 @@ const Ticket = ({ updateCounts }) => {
               </div>
 
               {/* Description */}
-              <p className="text-gray-500 text-base mb-6 leading-relaxed">
+              <p className="text-[#627382] text-base mb-6 leading-relaxed">
                 {ticket.Description}
               </p>
 
               {/* Bottom Row */}
               <div className="flex justify-between items-center text-gray-500">
                 <div className="flex items-center gap-6">
-                  <span className="text-gray-400">#{ticket.ID}</span>
+                  <span className="text-[#627382] font-medium">
+                    #{ticket.ID}
+                  </span>
 
                   <span
                     className={`font-medium ${
                       ticket.Priority === "HIGH"
                         ? "text-red-500"
                         : ticket.Priority === "MEDIUM"
-                        ? "text-yellow-500"
-                        : "text-green-500"
+                          ? "text-yellow-500"
+                          : "text-green-500"
                     }`}
                   >
                     {ticket.Priority} PRIORITY
@@ -124,24 +126,28 @@ const Ticket = ({ updateCounts }) => {
       </div>
 
       {/* Task Status */}
-      <div className="lg:w-1/3 mt-8 lg:mt-0">
-        <h2 className="text-xl font-semibold text-gray-700 mb-2">
+      <div className="mt-8 lg:mt-0 lg:w-[27%]">
+        <h2 className="text-2xl font-semibold text-[#34485A] mb-4">
           Task Status
         </h2>
-        <p className="text-xs text-gray-400 mb-4">
-          Select a ticket to add to Task Status
-        </p>
+        {taskStatus.length === 0 && (
+          <p className="text-[16px] text-gray-400">
+            Select a ticket to add to Task Status
+          </p>
+        )}
 
-        <div className="bg-gray-100 rounded-lg p-4 space-y-3 mb-6">
+        <div className="bg-gray-100 rounded-lg space-y-3 my-4">
           {taskStatus.map((ticket) => (
-            <div key={ticket.ID} className="bg-white rounded-md p-3 border">
-              <div className="flex justify-between items-center mb-2">
-                <span className="text-sm font-medium">{ticket.Title}</span>
+            <div key={ticket.ID} className="bg-white rounded-md p-4">
+              <div className="flex justify-between items-center mb-4">
+                <span className="text-lg font-medium text-[#001931] ">
+                  {ticket.Title}
+                </span>
               </div>
 
               <button
                 onClick={() => handleComplete(ticket)}
-                className="w-full bg-green-500 hover:bg-green-600 text-white text-xs py-2 rounded"
+                className="w-full bg-green-500 hover:bg-green-600 text-white text-[16px] font-semibold py-2 rounded"
               >
                 Complete
               </button>
@@ -150,20 +156,19 @@ const Ticket = ({ updateCounts }) => {
         </div>
 
         {/* Resolved */}
-        <h2 className="text-xl font-semibold text-gray-700 mb-2">
+        <h2 className="text-2xl font-semibold text-[#34485A] mb-4 mt-10">
           Resolved Task
         </h2>
 
-        <div className="bg-gray-100 rounded-lg space-y-3 p-4">
+        <div className="bg-gray-100 rounded-lg space-y-3">
           {resolved.map((ticket) => (
-            <div key={ticket.ID} className="bg-white p-3 rounded-md border">
-              <p className="text-sm font-medium">{ticket.Title}</p>
-              <p className="text-xs text-gray-400">#{ticket.ID}</p>
+            <div key={ticket.ID} className="bg-[#E0E7FF] p-5 rounded-md">
+              <p className="text-lg font-medium text-[#001931]">{ticket.Title}</p>
             </div>
           ))}
 
           {resolved.length === 0 && (
-            <p className="text-gray-400 text-sm">No resolved tasks yet.</p>
+            <p className="text-gray-400 text-[16px]">No resolved tasks yet.</p>
           )}
         </div>
       </div>
