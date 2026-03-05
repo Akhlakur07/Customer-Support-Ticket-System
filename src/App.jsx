@@ -3,6 +3,7 @@ import "./App.css";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Ticket from "./components/Ticket";
+import Footer from "./components/Footer";
 
 function App() {
   const [inProgressCount, setInProgressCount] = useState(0);
@@ -19,6 +20,7 @@ function App() {
         <Navbar />
         <Hero inProgressCount={inProgressCount} resolvedCount={resolvedCount} />
         <Ticket updateCounts={updateCounts} />
+        <Footer />
       </div>
     </>
   );

@@ -163,7 +163,9 @@ const Ticket = ({ updateCounts }) => {
         <div className="bg-gray-100 rounded-lg space-y-3">
           {resolved.map((ticket) => (
             <div key={ticket.ID} className="bg-[#E0E7FF] p-5 rounded-md">
-              <p className="text-lg font-medium text-[#001931]">{ticket.Title}</p>
+              <p className="text-lg font-medium text-[#001931]">
+                {ticket.Title}
+              </p>
             </div>
           ))}
 
